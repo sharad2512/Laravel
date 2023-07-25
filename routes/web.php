@@ -16,6 +16,9 @@ use App\Http\Controllers\UserController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/user/{name}/{city}',[UserController::class, 'userDetails']);
-// Route::get('/address',[UserController::class, 'userAddress']);
+Route::get('/user',[UserController::class, 'userDetails']);
+
+
+
+
 
