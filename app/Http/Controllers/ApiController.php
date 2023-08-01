@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Employee_Demo;
 use Illuminate\Http\Request;
-use Nette\Utils\Validators;
 use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
@@ -75,7 +74,6 @@ public function deletebyname(Request $request,$firstName){
     return response()->json(['Message'=>'Employee deleted succssfully']);
 
 }
-
 
 public function save(Request $request) {
     $rules = [

@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\FlareClient\Api;
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,9 @@ Route::post('/add',[ApiController::class,'store']);
 Route::put('/updatebyname/{firstName}',[ApiController::class,'updatebyname']);
 Route::delete('/deletebyname/{firstName}',[ApiController::class,'deletebyname']);
 Route::post('/save',[ApiController::class,'save']);
+
+
+Route::post('/register',[UserController::class,'register']);
+Route::post('/login',[UserController::class,'login']);
+Route::get('/profile',[UserController::class,'profile']);
+Route::post('/logout',[UserController::class,'logout']);
